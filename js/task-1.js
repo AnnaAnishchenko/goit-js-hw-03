@@ -1,12 +1,14 @@
 function slugify(title) {
-  return String(title)
-    .toLowerCase()
-    .replace(/[^a-z0-9 -]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-");
+  const name = title.split(" ").join("-");
+  return name.toLowerCase();
 }
 
-// function slugify(title) { }
+// const slugify = function (title) {
+//   const name = title.split(" ").join("-");
+//   return name.toLowerCase();
+// }
+
+
 console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
 console.log(slugify("English for developer")); // "english-for-developer"
 console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
